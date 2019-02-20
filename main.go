@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gustavokuklinski/hoxtel.me/controller/hostel"
-	"github.com/gustavokuklinski/hoxtel.me/controller/room"
-	"github.com/gustavokuklinski/hoxtel.me/controller/user"
-	"github.com/gustavokuklinski/hoxtel.me/lib/loginmanager"
+	"github.com/gustavokuklinski/hostel-manager/controller/hostel"
+	"github.com/gustavokuklinski/hostel-manager/controller/room"
+	"github.com/gustavokuklinski/hostel-manager/controller/user"
+	"github.com/gustavokuklinski/hostel-manager/lib/loginmanager"
 )
 
 func main() {

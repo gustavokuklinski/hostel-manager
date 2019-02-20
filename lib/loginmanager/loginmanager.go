@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/sessions"
-	"github.com/gustavokuklinski/hoxtel.me/lib/sysdb"
+	"github.com/gustavokuklinski/hostel-manager/lib/sysdb"
 )
 
 var store = sessions.NewCookieStore([]byte("9208439023890284028490"))

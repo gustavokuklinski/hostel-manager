@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"text/template"
 
-	"github.com/gustavokuklinski/hoxtel.me/lib/crypty"
-	"github.com/gustavokuklinski/hoxtel.me/lib/loginmanager"
-	"github.com/gustavokuklinski/hoxtel.me/lib/sysdb"
+	"github.com/gustavokuklinski/hostel-manager/lib/crypty"
+	"github.com/gustavokuklinski/hostel-manager/lib/loginmanager"
+	"github.com/gustavokuklinski/hostel-manager/lib/sysdb"
 )
 
 type sHostel struct {
