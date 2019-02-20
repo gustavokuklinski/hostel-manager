@@ -1,0 +1,19 @@
+{{ define "Hostel" }}
+{{ template "Header" }}
+{{ template "Menu" . }}
+<h1>Hostel Panel</h1>
+
+{{ if .Hostel.Cid  }}
+	{{ .Hostel.Name }} | <a href="/hostel/room/new?huid={{ .Hostel.Cid  }}">Add room</a> | <a href="/hostel/edit?huid={{ .Hostel.Cid }}">Edit info</a>
+
+	<h3>Hostel Rooms</h3>
+	{{ range .SliceRoom }}
+		{{ .Name }} | <a href="/hostel/room/edit?ruid={{ .Cid}}">Edit</a><br />
+	{{ end }}
+
+{{ else }}
+	<p> No hostel found, please <a href="/hostel/new">register</a> a new one!</p>
+{{ end }}
+
+{{ template "Footer" }}
+{{ end }}

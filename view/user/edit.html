@@ -1,0 +1,15 @@
+{{ define "Edit" }}
+{{ template "Header" }}
+{{ template "SystemMenu" . }}
+<h1>Edit Account</h1>
+<p>* After edit your account, please login again.</p>
+<form method="POST" action="/account/edit/update">
+<input type="hidden" name="uid" value="{{ .Cid }}" />
+<label>Name</label><input type="text" name="name" value="{{ .Name }}"/><br />
+<label>Surname</label><input type="text" name="surname" value="{{ .Surname }}" /><br />
+<label>E-mail</label><input type="text" name="email" value="{{ .Email }}"/><br />
+<label>Password</label><input type="password" name="password" value="{{ .Password }}" /><br />
+<input type="submit" value="Edit account" />
+</form>
+{{ template "Footer" }}
+{{ end }}

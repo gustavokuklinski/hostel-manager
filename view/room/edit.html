@@ -1,0 +1,60 @@
+{{ define "Edit" }}
+{{ template "Header" }}
+{{ template "Menu" . }}
+<h1>Create Room</h1>
+<form method="POST" action="/hostel/room/update">
+
+  <input type="hidden" name="ruid" value="{{ .Room.Cid }}" />
+
+  <label>Name: </label><input type="text" name="name" value="{{.Room.Name }}" /><br />
+  <label>Capacity: </label>
+	<select name="capacity">
+		<option value="{{.Room.Capacity }}">{{.Room.Capacity}}</option>
+		<option>-----</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select><br />
+  <label>Locker: </label>
+	<select name="locker">
+		<option value="{{ .Room.Locker }}">{{ if .Room.Locker }}Yes{{ else }}No{{ end }}</option>
+		<option>-----</option>
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Private bathroom: </label>
+	<select name="bathroom">
+		<option value="{{ .Room.Bathroom }}">{{ if .Room.Bathroom }}Yes{{ else }}No{{ end }}</option>
+		<option>-----</option>
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Couple Bed</label>
+	<select name="couple_bad">
+		<option value="{{ .Room.Couple_bad }}">{{ if .Room.Couple_bad }}Yes{{ else }}No{{ end }}</option>
+		<option>-----</option>
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Addition Bed</label>
+	<select name="additional_bad">
+		<option value="{{ .Room.Additional_bad }}">{{ .Room.Additional_bad }}</option>
+		<option>-----</option>
+		<option value="0">No extra bed</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select><br />
+  <input type="Submit" value="Update Room" /> | <a href="/hostel/room/delete?ruid={{ .Room.Cid }}">Delete</a>
+</form>
+{{ template "Footer" }}
+{{ end }}

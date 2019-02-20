@@ -1,0 +1,11 @@
+{{ define "Signin" }}
+{{ template "Header" }}
+{{ template "Menu" }}
+<h1>Sign In</h1>
+<form method="POST" action="/login">
+<label>E-Mail</label><input type="text" name="email" /><br />
+<label>Password</label><input type="password" name="password" /></br >
+<input type="submit" value="Signin" />
+</form>
+{{ template "Footer" }}
+{{ end }}

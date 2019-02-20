@@ -1,0 +1,9 @@
+{{ define "SystemMenu" }}
+<nav>
+<a href="/hostel">Hostel Panel</a>
+<a href="/hostel/new">New Hostel</a>
+| <a href="/logout">Logout</a> | 
+
+Account: <a href="/account/edit?uid={{.Cid}}">Edit account</a>
+</nav>
+{{ end }}

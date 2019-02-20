@@ -1,0 +1,50 @@
+{{ define "New" }}
+{{ template "Header" }}
+{{ template "Menu" . }}
+<h1>Create Room</h1>
+<form method="POST" action="/hostel/room/create">
+
+  <input type="hidden" name="huid" value="{{ .Hostel.Cid }}" />
+
+  <label>Name: </label><input type="text" name="name" /><br />
+  <label>Capacity: </label>
+	<select name="capacity">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select><br />
+  <label>Locker: </label>
+	<select name="locker">
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Private bathroom: </label>
+	<select name="bathroom">
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Couple Bed</label>
+	<select name="couple_bad">
+		<option value="0"> No </option>
+		<option value="1"> Yes </option>
+	</select><br />
+  <label>Addition Bed</label>
+	<select name="additional_bad">
+		<option value="0">No extra bad</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select>
+  <input type="Submit" value="Save Room" />
+</form>
+{{ template "Footer" }}
+{{ end }}

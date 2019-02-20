@@ -1,0 +1,16 @@
+{{ define "New" }}
+{{ template "Header" }}
+{{ template "Menu" . }}
+<h1>Create new Hostel</h1>
+<form method="POST" action="/hostel/create">
+
+  <input type="hidden" name="uid" value="{{.User.Cid}}" />
+
+  <label>Name: </label><input type="text" name="name" /><br />
+  <label>State: </label><input type="text" name="state" /><br />
+  <label>Address: </label><input type="text" name="address" /><br />
+  <label>Phone: </label><input type="text" name="phone" /><br />
+  <input type="Submit" value="Save Hostel" />
+</form>
+{{ template "Footer" }}
+{{ end }}
